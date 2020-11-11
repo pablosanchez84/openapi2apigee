@@ -3,21 +3,22 @@ openapi-apigee-node-utility
 
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+`openapi2apigee` module converts a standard Open API spec (previously known as Swagger) into an Apigee API Proxy bundle and deploys into an Apigee Edge Organization.
 
-OpenAPI (formerly known as Swagger) to Apigee API Proxy Bundle using Node.js Utility
+### Now supports OAS v3 as well
+
+# Pre-requisite 
+- node.js
 
 # Installation
-
-You can install `openapi2apigee` either through npm or by cloning and linking the code from GitHub.  This document covers the installation details for installing from npm.
+You can install `openapi2apigee` either through `npm` or by cloning the code from this GitHub repo.  This README covers the installation steps with `npm`.
 
 ## Installation from npm
-
-The `openapi2apigee` module (and its dependencies) is designed for Node.js and is available through npm using the following command:
-
 ### From a Terminal Window:
 ```bash
-$ sudo npm install -g openapi2apigee
+$ npm install -g openapi2apigee
 ```
 
 # <a name="reference"></a>Command reference and examples
@@ -26,12 +27,12 @@ $ sudo npm install -g openapi2apigee
 
 ## <a name="generateapi"></a>generateApi
 
-Generates Apigee API Bundles from OpenAPI files and help you deploy to Apigee Edge
+Generates Apigee API Proxy bundle from OpenAPI specification file and deploys to Apigee Edge Organization.
 
-#### Examples
+#### Example
 
 ```bash
-$ openapi2apigee generateApi petStore -s http://petstore.openapi.io/v2/openapi.json -D -d /Users/Anil/Desktop/
+$ openapi2apigee generateApi petStore -s http://petstore.swagger.io/v2/swagger.json -D -d /Users/me/Desktop/
 ```
 
 #### Articles
